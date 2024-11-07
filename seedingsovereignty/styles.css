@@ -1,0 +1,363 @@
+/* styles.css */
+@font-face {
+    font-family: 'VTCMarsha';
+    font-weight: normal;
+    font-style: normal;
+    src: url('VTCMarsha-Bold.woff') format('woff');
+}
+/* Bold weight; Normal style */
+@font-face {
+    font-family: 'VTCMarsha';
+    font-weight: bold;
+    font-style: normal;
+    src: url('VTCMarsha-Bold.woff') format('woff');
+}
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'Helvetica', sans-serif;
+}
+
+p {font-size: 18px; line-height: 22px;
+    margin-bottom: 15px;
+    letter-spacing: .02em}
+
+h1 {font-size: 74px; line-height: 74px; text-transform: uppercase;
+    font-family: "VTCMarsha";
+    margin-top: 0px; 
+    margin-bottom: 30px; /* Set bottom margin to 20px */}
+
+h2 {font-size: 64px; line-height: 64px; text-transform: uppercase;
+    font-family: "VTCMarsha";
+    margin-top:0px;
+    margin-bottom: 25px; /* Set bottom margin to 20px */}
+
+h3 {font-size: 24px; line-height:40px;
+    margin-top:15px; margin-bottom:5px;
+ /* Set bottom margin to 20px */}
+
+small {font-size: 14px; font-weight:600; line-height: 22px; text-transform: uppercase;}
+
+
+
+
+th, td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: left;
+}
+
+th:first-child, td:first-child {
+    width: 80%;
+}
+
+th:nth-child(2), td:nth-child(2), 
+th:nth-child(3), td:nth-child(3) {
+    width: 10%;
+}
+
+tr {
+    border-bottom: 1px solid #000; /* Single line between rows */
+}
+
+tr:last-child {
+    border-bottom: none; /* No border under the last row */
+}
+
+.table-link {
+    font-weight: bold; /* Make text bold */
+    text-transform: uppercase; /* Make text uppercase */
+    font-size: 14px; /* Set font size to 14px */
+    color: #FF631E; /* Set text color (adjust as needed) */
+    text-decoration: none;
+    padding: 0px;}
+
+.table-link:hover {color: #000000;}
+
+.event {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between; /* Align the 3 containers */
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #A09C00;
+    border-bottom: 2px solid black;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Common container styles for each flex container */
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+/* First container: Left aligned logo */
+.logo-container {
+    flex: 1; /* Same width as CTA container */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Second container: Centered links */
+.links-container {
+    flex: 2; /* Twice the space of logo and CTA */
+    justify-content: center;
+    gap: 20px; /* Space between the links */
+}
+
+.links-container a {
+    font-weight: bold; /* Make text bold */
+    text-transform: uppercase; /* Make text uppercase */
+    font-size: 14px; /* Set font size to 14px */
+    color: black; /* Set text color (adjust as needed) */
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.links-container a:hover {
+    background-color: none;
+}
+
+/* Third container: Right aligned CTA button */
+.cta-container {
+    flex: 1; /* Same width as logo container */
+    justify-content: flex-end; /* Align CTA to the right */
+}
+
+.cta-button {
+    width: 150px;      /* Set width to 320px */
+    height: 45px;      /* Set height to 62px */
+    background-color: #FFDF00;  /* Yellow background color */
+    border-radius: 50%; /* This makes it an oval (a circle if width == height) */
+    display: flex;
+    justify-content: center;  /* Center text horizontally */
+    align-items: center;      /* Center text vertically */
+    border: 2px solid black;  /* 2px border around the button */
+    cursor: pointer;          /* Makes it clickable */
+    text-align: center;       /* Centers the text */
+}
+
+.cta-text {
+    font-weight: bold; /* Make text bold */
+    text-transform: uppercase; /* Make text uppercase */
+    font-size: 14px; /* Set font size to 14px */
+    color: black; /* Set text color (adjust as needed) */
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.cta-text:hover {
+      color: white;
+}
+
+.cta-button:hover {
+    background-color: #000000; /* Slightly darker yellow on hover */
+     color: white;
+}
+
+
+.hero {
+    display: flex; /* Use flexbox for layout */
+    border-bottom: 2px solid black; /* Left border */
+}
+
+.left-hero {
+    background-color: #FF631E; /* Left column color */
+    flex: 1; /* Take up equal space */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.right-hero {
+    background-color: gray; /* Right column color */
+    flex: 1; /* Take up equal space */
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    border-left: 2px solid black; /* Border between the two columns */
+}
+
+
+
+
+.events {
+    background-color: #FFFFFF;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 2px solid black;}
+
+
+
+.programs {
+    background-color: #FFFFFF;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 2px solid black;}
+
+
+.responsive-image {
+    width: 100%; /* Set image width */
+     /* Set image height */
+    display: block; /* Ensure the image is a block element */
+    margin: 0 auto; /* Center the image horizontally */
+
+}
+
+.image-description {
+    margin: 0px 0 15px 0; /* 20px space above and below the paragraph */
+}
+
+.image-link {
+    font-weight: bold; /* Make text bold */
+    text-transform: uppercase; /* Make text uppercase */
+    font-size: 14px; /* Set font size to 14px */
+    color: black; /* Set text color (adjust as needed) */
+    text-decoration: none;
+    padding: 0px;
+}
+
+
+.carousel-header {
+    display: flex;
+    justify-content: space-between; /* Pushes h2 to the left and buttons to the right */
+    align-items: center; /* Vertically centers the buttons with the h2 */
+    padding: 10px 0; /* Optional: Add some padding */
+}
+
+/* h2 left-aligned */
+.carousel-header h2 {
+    font-size: 64px; line-height: 64px; text-transform: uppercase;
+    margin-top:0px;
+    margin-bottom: 25px; /* Set bottom margin to 20px */
+}
+
+/* Carousel buttons container */
+.carousel-buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%; /* Full width */
+    overflow: scroll; /* Hide overflow */
+}
+
+.carousel-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    transition: transform 0.5s ease; /* Smooth transition */
+    gap: 20px; 
+}
+
+.carousel-item {
+    min-width: 35%; /* Show 2 items (50% each) */
+    box-sizing: border-box; /* Include padding/border in width */
+    padding: 0px; /* Add some padding */
+    background-color: none; /* Example background color */
+    color: black; /* Example text color */
+    text-align: left; /* Center text */
+}
+
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .carousel-item {
+        flex: 0 0 calc(100% - 20px); /* One item per view on mobile */
+    }
+}
+
+/* Extra Small Screens (Mobile) */
+@media screen and (max-width: 480px) {
+    .carousel-item {
+        flex: 0 0 100%; /* Full-width on very small screens */
+        padding: 15px; /* Adjust padding if needed */
+    }
+}
+
+
+
+
+
+
+
+
+.prev {
+    left: 10px; /* Position left button */
+    transform: translateY(-30%);
+    position: relative;
+    background-color: white; /* Yellow background for the buttons */
+    border: 1px solid;
+    color: black;
+    font-size: 16px; /* Larger font size */
+    font-weight: none;
+    padding: 8px 13px;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+.next {
+    right: 10px; /* Position right button */
+    transform: translateY(-30%);
+    background-color: white; /* Yellow background for the buttons */
+    border: 1px solid;
+    color: black;
+    font-size: 16px; /* Larger font size */
+    font-weight: none;
+    padding: 8px 13px;
+    cursor: pointer;
+    border-radius: 50%;
+
+
+.prev:hover {
+
+    background-color: black;
+    border: 1px solid;
+    color: white;
+}
+
+
+.next:hover {
+
+    background-color: black; /* Yellow background for the buttons */
+    border: 1px solid;
+    color: white;
+}
+
+
+
+.button-wrap
+{padding-left: 20px;
+padding-right: 20px;}
+
+
+
