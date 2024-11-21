@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.gradient-navbar {
+    background: linear-gradient(to bottom, limegreen, white);
+    padding: 50px;
+    gap:20px;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navlinks a:hover {
+    color: white;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 30px #ff4da6, 0 0 30px #ff4da6, 0 0 50px #ff4da6, 0 0 40px #ff4da6;
+  }
+}
+
+
+    img {
+        border-radius: 25px;
+        border: solid 2px #D915A8;
+    }
+
+
+     table {
+        width: 50%;
+        border-collapse: collapse;
+        margin: 60px auto;
+        text-align: left;
+        border: solid 2px;
+    }
+
+    td {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        background: lawngreen;
+        border: solid 2px;
+        border-color: black;
+    }
+
+.imagerow {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.imagescale {
+    width: 300px; /* Set the initial width */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling */
+}
+
+.imagescale:hover {
+    transform: scale(1.5); /* Increase size by 10% */
+}
+
+
+/* Apply Silkscreen font to all text */
+body {
+    font-family: 'Silkscreen', cursive;
+    color: #D915A8; /* Apply text color globally */
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading and body text sizes */
+h1 {
+    text-align: center;
+    font-size: 72px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 24px;
+}
+
