@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Magic Boxes</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: cornsilk;
+      margin: 0;
+      padding: 2em;
+    }
+
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .box-row {
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+      margin-bottom: 3em;
+    }
+
+    .magic-btn {
+      width: 300px;
+      height: 300px;
+      font-size: 1.5em;
+      color: black;
+      border: 2px solid black;
+      border-radius: 0;
+      cursor: pointer;
+      transition: none;
+      white-space: pre-wrap;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #makeBox { background-color: greenyellow; }
+    #withBox { background-color: lavender; }
+    #forBox  { background-color: tomato; }
+
+    .prompt-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 120px;
+      margin-bottom: 1.5em;
+    }
+
+    .prompt-text {
+      font-size: 1.8em;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      max-width: 800px;
+      margin: 0;
+      text-align: center;
+    }
+
+    .prompt-text.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reset-btn {
+      display: block;
+      margin: 0 auto;
+      font-size: 1.2em;
+      padding: 0em;
+      border: 2px solid black;
+      height: 100px;
+      width: 100px;
+      background-color: cornsilk;
+      color: black;
+      border-radius: 999px; /* Makes it oval */
+      cursor: pointer;
+    }
+
+    .reset-btn:hover {
+      background-color: lightgoldenrodyellow;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      font-weight: normal;
+      text-align: center;
+    }
+
+    /* 👇 Rotational Shake Animation */
+    @keyframes rotate-shake {
+      0%   { transform: rotate(0deg); }
+      20%  { transform: rotate(4deg); }
+      40%  { transform: rotate(-4deg); }
+      60%  { transform: rotate(3deg); }
+      80%  { transform: rotate(-3deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .shake {
+      animation: rotate-shake 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+<h1>The Magic Boxes</h1><br><br>
+  <div class="container">
+    <div class="box-row">
+      <button id="makeBox" class="magic-btn">make</button>
+      <button id="withBox" class="magic-btn">with</button>
+      <button id="forBox" class="magic-btn">for</button>
+    </div>
+
+    <div class="prompt-wrapper">
+      <div id="result" class="prompt-text"></div>
+    </div>
+
+    <button id="resetBtn" class="reset-btn hidden">↺ reset</button>
+  </div>
+
+  <script>
+    const makeOptions = [
+      "a mixtape", "a cookbook", "a sidewalk installation",
+      "a tv show", "piece of furniture", "an 8-page zine", "a yummy lunch"
+
+    ];
+
+    const withOptions = [
+      "masking tape", "your voice", "rocks",
+      "pasta", "someone else's body", "humble materials", "secrets"
+    ];
+
+    const forOptions = [
+      "your crush", "a future civilization",
+      "people who hate advice", "a small dog with no indoor voice",
+      "grandpas", "the ghost of your most trusted ancestor"
+
+    ];
+
+    let make = null, with_ = null, for_ = null;
+
+    function updatePrompt() {
+      const result = document.getElementById('result');
+      if (make && with_ && for_) {
+        result.innerText = `Make ${make} with ${with_} for ${for_}.`;
+        result.classList.add("visible");
+        document.getElementById('resetBtn').classList.remove("hidden");
+      }
+    }
+
+    function resetAll() {
+      make = with_ = for_ = null;
+      document.getElementById('makeBox').innerText = "make";
+      document.getElementById('withBox').innerText = "with";
+      document.getElementById('forBox').innerText = "for";
+      const result = document.getElementById('result');
+      result.innerText = "";
+      result.classList.remove("visible");
+      document.getElementById('resetBtn').classList.add("hidden");
+    }
+
+    function shakeElement(el) {
+      el.classList.add("shake");
+      setTimeout(() => el.classList.remove("shake"), 400);
+    }
+
+    document.getElementById('makeBox').addEventListener('click', () => {
+      const el = document.getElementById('makeBox');
+      make = makeOptions[Math.floor(Math.random() * makeOptions.length)];
+      el.innerText = make;
+      shakeElement(el);
+      updatePrompt();
+    });
+
+    document.getElementById('withBox').addEventListener('click', () => {
+      const el = document.getElementById('withBox');
+      with_ = withOptions[Math.floor(Math.random() * withOptions.length)];
+      el.innerText = with_;
+      shakeElement(el);
+      updatePrompt();
+    });
+
+    document.getElementById('forBox').addEventListener('click', () => {
+      const el = document.getElementById('forBox');
+      for_ = forOptions[Math.floor(Math.random() * forOptions.length)];
+      el.innerText = for_;
+      shakeElement(el);
+      updatePrompt();
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', resetAll);
+  </script>
+
+</body>
+</html>
+
+
