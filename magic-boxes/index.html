@@ -13,7 +13,7 @@
       font-family: sans-serif;
       background: cornsilk;
       margin: 0;
-      padding: 2em;
+      padding: 1em;
     }
 
     .container {
@@ -25,7 +25,8 @@
       display: flex;
       gap: 1em;
       justify-content: center;
-      margin-bottom: 3em;
+      margin-bottom: 2em;
+      flex-wrap: wrap;
     }
 
     .magic-btn {
@@ -43,6 +44,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      flex-shrink: 0;
     }
 
     #makeBox { background-color: greenyellow; }
@@ -55,6 +57,7 @@
       align-items: center;
       min-height: 120px;
       margin-bottom: 1.5em;
+      padding: 0 1em;
     }
 
     .prompt-text {
@@ -82,7 +85,7 @@
       width: 100px;
       background-color: cornsilk;
       color: black;
-      border-radius: 999px; /* Makes it oval */
+      border-radius: 999px;
       cursor: pointer;
     }
 
@@ -98,9 +101,9 @@
       font-size: 1.8em;
       font-weight: normal;
       text-align: center;
+      margin-bottom: 1em;
     }
 
-    /* 👇 Rotational Shake Animation */
     @keyframes rotate-shake {
       0%   { transform: rotate(0deg); }
       20%  { transform: rotate(4deg); }
@@ -113,10 +116,113 @@
     .shake {
       animation: rotate-shake 0.4s ease;
     }
+
+    /* Mobile responsive styles */
+    @media (max-width: 768px) {
+      body {
+        padding: 0.5em;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      h1 {
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+        order: 1;
+      }
+
+      .prompt-wrapper {
+        order: 2;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 150px;
+        margin-bottom: 1em;
+        padding: 0 0.5em;
+      }
+
+      .prompt-text {
+        font-size: 1.3em;
+      }
+
+      .reset-btn {
+        order: 3;
+        height: 60px;
+        width: 60px;
+        font-size: 1em;
+        margin-bottom: 1em;
+      }
+
+      .box-row {
+        order: 4;
+        flex-direction: column;
+        gap: 0.75em;
+        margin-bottom: 1em;
+        align-items: center;
+      }
+
+      .magic-btn {
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        font-size: 1.2em;
+        padding: 0.75em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.2em;
+      }
+
+      .box-row {
+        gap: 0.5em;
+      }
+
+      .magic-btn {
+        height: 80px;
+        font-size: 1em;
+        padding: 0.5em;
+      }
+
+      .prompt-wrapper {
+        min-height: 120px;
+      }
+
+      .prompt-text {
+        font-size: 1.1em;
+      }
+
+      .reset-btn {
+        height: 50px;
+        width: 50px;
+        font-size: 0.9em;
+      }
+    }
+
+    /* Very small screens */
+    @media (max-width: 380px) {
+      .magic-btn {
+        height: 70px;
+        font-size: 0.9em;
+      }
+
+      .prompt-text {
+        font-size: 1em;
+      }
+    }
   </style>
 </head>
 <body>
-<h1>The Magic Boxes</h1><br><br>
+<h1>The Magic Boxes</h1>
   <div class="container">
     <div class="box-row">
       <button id="makeBox" class="magic-btn">make</button>
@@ -135,7 +241,6 @@
     const makeOptions = [
       "a mixtape", "a cookbook", "a sidewalk installation",
       "a tv show", "piece of furniture", "an 8-page zine", "a yummy lunch"
-
     ];
 
     const withOptions = [
@@ -147,7 +252,6 @@
       "your crush", "a future civilization",
       "people who hate advice", "a small dog with no indoor voice",
       "grandpas", "the ghost of your most trusted ancestor"
-
     ];
 
     let make = null, with_ = null, for_ = null;
@@ -206,5 +310,3 @@
 
 </body>
 </html>
-
-
