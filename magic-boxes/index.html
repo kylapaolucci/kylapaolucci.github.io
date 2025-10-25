@@ -136,9 +136,10 @@
 
       .box-row {
         order: 1;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 0.75em;
-        margin-bottom: 1em;
+        margin-bottom: 5vh;
         align-items: center;
       }
 
@@ -149,7 +150,7 @@
         align-items: center;
         justify-content: center;
         min-height: 150px;
-        margin-bottom: 1em;
+        margin-bottom: 5vh;
         padding: 0 0.5em;
       }
 
@@ -159,18 +160,25 @@
 
       .reset-btn {
         order: 3;
-        height: 60px;
-        width: 60px;
-        font-size: 1em;
-        margin-bottom: 1em;
+        height: 70px;
+        width: 70px;
+        font-size: 0.9em;
+        margin-bottom: 10vh;
       }
 
       .magic-btn {
-        width: 100%;
-        max-width: 400px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
         font-size: 1.2em;
         padding: 0.75em;
+      }
+
+      #makeBox {
+        width: 130px;
+      }
+
+      #withBox, #forBox {
+        width: 130px;
       }
     }
 
@@ -184,9 +192,18 @@
       }
 
       .magic-btn {
-        height: 80px;
+        width: 200px;
+        height: 200px;
         font-size: 1em;
         padding: 0.5em;
+      }
+
+      #makeBox {
+        width: 200px;
+      }
+
+      #withBox, #forBox {
+        width: 200px;
       }
 
       .prompt-wrapper {
@@ -198,8 +215,8 @@
       }
 
       .reset-btn {
-        height: 50px;
-        width: 50px;
+        height: 60px;
+        width: 60px;
         font-size: 0.9em;
       }
     }
@@ -305,4 +322,5 @@
   </script>
 
 </body>
+</html>
 </html>
