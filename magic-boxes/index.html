@@ -121,21 +121,25 @@
     @media (max-width: 768px) {
       body {
         padding: 0.5em;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
       }
 
       .container {
         display: flex;
         flex-direction: column;
-        flex: 1;
+        min-height: calc(100vh - 3em);
       }
 
       h1 {
         font-size: 1.4em;
-        margin-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .box-row {
         order: 1;
+        flex-direction: column;
+        gap: 0.75em;
+        margin-bottom: 1em;
+        align-items: center;
       }
 
       .prompt-wrapper {
@@ -159,14 +163,6 @@
         width: 60px;
         font-size: 1em;
         margin-bottom: 1em;
-      }
-
-      .box-row {
-        order: 4;
-        flex-direction: column;
-        gap: 0.75em;
-        margin-bottom: 1em;
-        align-items: center;
       }
 
       .magic-btn {
@@ -222,7 +218,7 @@
   </style>
 </head>
 <body>
-<h1>The Magic Boxes</h1>
+  <h1>The Magic Boxes</h1>
   <div class="container">
     <div class="box-row">
       <button id="makeBox" class="magic-btn">make</button>
