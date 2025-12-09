@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Origin</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+  
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Michroma', sans-serif;
+      background-color: #306782;
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #8FA7B2;
+      padding: 15px 30px;
+      z-index: 10;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: gray;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-image: url('indexpic1.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    .hero-overlay-text {
+      position: relative;
+      z-index: 2;
+      color: white;
+      max-width: 80%;
+    }
+
+    .hero-overlay-text h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-overlay-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-overlay-text p {
+      font-size: 1.5rem;
+    }
+
+    /* Centered Welcome Section */
+    .welcome-section {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .welcome-section h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .welcome-section h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    /* Story Section */
+    .story-section {
+      width: 100%;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+.story-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 40px;
+  align-items: center; /* center the text vertically */
+}
+.story-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 40px;
+  align-items: center; /* THIS centers the text vertically beside the images */
+}
+
+.story-text {
+  text-align: center; /* THIS centers the lines of text */
+}
+
+
+    .story-images {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .story-images img {
+      width: 90%;
+      height: auto;
+     border-radius: 100px;
+      object-fit: cover;
+    }
+
+    .story-text {
+      flex: 2 1 500px;
+    }
+
+    .story-text p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .story-text hr {
+      border: 1px solid white;
+      margin: 30px 0;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #8FA7B2;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #8FA7B2;
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .story-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .story-images, .story-text {
+        flex: unset;
+        width: 100%;
+        text-align: center;
+      }
+
+      .story-images img {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+.story-text {
+  max-width: 850px;   /* wider line length */
+  width: 90%;         /* allows responsiveness */
+  margin: 0 auto;     /* center it */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #306782; /* SAME as your image */
+  font-family: 'Michroma', sans-serif;
+  color: white;
+}
+
+.diamond-section {
+  margin: 60px 0;
+  border-top: 2px solid white;
+  padding-top: 30px;
+}
+
+.divider {
+  width: 90%;
+  height: 3px;
+  background-color: #d6d6d6;  /* Light silver line */
+  border: none;
+  margin: 0 auto 40px auto;
+}
+
+.diamond-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.diamond-img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.diamond-text h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.diamond-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+}
+.cta-container {
+  text-align: center;
+  margin: 80px 0;
+}
+
+ /* Button */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #8FA7B2;
+      color: white;
+      text-decoration: none;
+      border-radius: 100px;
+      margin-top: 20px;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #8FA7B2;
+      transform: scale(1.05);
+    }
+.narrow-text {
+  max-width: 600px;   /* narrower than the rest of the story-text */
+  margin: 0 auto;     /* centers the box */
+  text-align: center; /* optional: centers the lines */
+  line-height: 1.6;   /* makes it easier to read */
+  padding: 0 10px;    /* optional: spacing on smaller screens */
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+}
+.nav-logo {
+  height: 32px;   /* adjust size */
+  width: auto;
+  vertical-align: middle;
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="origin.html">Origin</a></li>
+
+    <!-- LOGO IN THE CENTER -->
+    <li><img src="logo.png" alt="Logo" class="nav-logo"></li>
+
+    <li><a href="craft.html">Craft</a></li>
+    <li><a href="create.html">Create</a></li>
+  </ul>
+</nav>
+
+<!-- Origin Text Section -->
+<section class="story-section">
+  <div class="story-container">
+
+    <!-- Text Section -->
+    <div class="story-text">
+      <br>
+      <br>
+
+<div class="story-text">
+  <h1>The Origin of Your Gemstone</h1>
+      <br>
+  <h2>At Uncut Gems, every diamond</h2>
+  <h2>and gemstone have a story</h2>
+    <br>
+  <!-- Narrow box only for this part -->
+  <div class="narrow-text">
+    <p>We want you to explore each stone, learn about its origins, and its energy. Then choose one that really speaks out to you. Every choice is personal, every piece is unique, and every ring becomes 
+    a part of your story.</p>
+
+    <p>Diamonds at Uncut Gems come in two options:<br><strong>Natural</strong> or <strong>lab-grown</strong>.</p>
+
+    <p>Natural diamonds are formed deep within the Earth taking over billions of years, carrying a timeless history and unique story in every stone.</p>
+
+    <p>Lab-grown diamonds are created in controlled laboratory environments using advanced technology that replicates these natural conditions. They have the same sparkle, hardness, and clarity as mined diamonds but are produced in just a few weeks.</p>
+
+    <p>Both options are beautiful, high-quality, and allow you to choose a diamond that fits your style and values.</p>
+  </div>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamonds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SECTION 1 -->
+  <section class="diamond-section">
+
+
+    <div class="diamond-container">
+      <img src="diamond1.jpg" class="diamond-img">
+      <div class="diamond-text">
+        <h2>Lab Grown Round<br> Brilliant Cut Diamond</h2>
+        <p>Lab-grown diamonds are created in a laboratory using advanced technology that replicates the natural conditions of the Earth. Unlike natural diamonds, which take billions of years to form deep within the Earth’s mantle, lab-grown diamonds can be produced in just a few weeks. They are chemically, physically, and visually identical to mined diamonds. Lab-grown diamonds became commercially available in the 1950s and 1980s, and today they are valued for being ethical, sustainable, and a modern alternative to traditional mined diamonds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="diamond-section">
+
+    <div class="diamond-container">
+      <img src="diamond2.jpg" class="diamond-img">
+      <div class="diamond-text">
+        <h2>Lab Grown Oval<br>Cut Diamond</h2>
+        <p>Lab-grown oval cut diamonds are created in laboratories using advanced technology that mimics the natural conditions of the Earth. Like all lab-grown diamonds, they are chemically, physically, and visually identical to natural diamonds but can be produced in a matter of weeks instead of billions of years. The oval cut was first popularized in the 1960s as an elegant alternative to the round cut, offering a unique elongated shape that maximizes sparkle. Lab-grown diamonds have become increasingly popular for their ethical sourcing, sustainability, and modern approach to fine jewelry.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="diamond-section">
+
+    <div class="diamond-container">
+      <img src="diamond3.jpg" class="diamond-img">
+      <div class="diamond-text">
+        <h2>Emerald Cut <br> Winza Sapphire</h2>
+        <p>Winza sapphires come from the Winza region in central Tanzania, a source discovered in the early 2000s. These sapphires are prized for their vibrant, rich colors and exceptional clarity. The emerald cut, with its clean lines and step-cut facets, highlights the natural beauty and depth of the stone. Winza sapphires are ethically mined and carefully selected.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="diamond-section">
+
+    <div class="diamond-container">
+      <img src="diamond4.jpg" class="diamond-img">
+      <div class="diamond-text">
+        <h2>Asscher<br> Montana Sapphire</h2>
+        <p>Montana sapphires come from the U.S. state of Montana, a source known for producing sapphires with beautiful, natural colors and exceptional clarity. These stones have been mined since the late 19th century and are valued for their unique shades ranging from deep blue to soft pastels. The Asscher cut, with its square shape and step-cut facets, emphasizes the stone’s clarity and brilliance, creating a sophisticated and timeless look. Montana sapphires are responsibly sourced.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section class="diamond-section">
+
+    <div class="diamond-container">
+      <img src="diamond5.jpg" class="diamond-img">
+      <div class="diamond-text">
+        <h2>Pear<br> Cut Diamond</h2>
+        <p>Pear cut diamonds, also known as teardrop diamonds, combine the elegance of the round brilliant and the sophistication of the marquise cut. This shape was first created in the 15th century by Flemish diamond cutter Lodewyk van Berquem, who revolutionized diamond cutting techniques. Pear cut diamonds are valued for their unique shape, exceptional sparkle, and ability to elongate the finger. They are available in both natural and lab-grown options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="diamond-section">
+ 
+    <div class="diamond-container">
+      <img src="diamond6.jpg" class="diamond-img">
+      <div class="diamond-text">
+        <h2>Hexagonal<br> Nigerian Sapphire</h2>
+        <p>Nigerian sapphires come from the rich mineral deposits of Nigeria, which have produced gemstones known for their vibrant color and excellent clarity. These sapphires are relatively new to the jewelry world, gaining recognition in the late 20th century for their high quality and unique hues. The hexagonal cut highlights the natural geometry and brilliance of the stone, creating a modern and striking look. Each sapphire is carefully selected and ethically sourced, making your piece both beautiful and responsible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section class="diamond-section">
+
+    <div class="diamond-container">
+      <img src="diamond7.jpg" class="diamond-img">
+      <div class="diamond-text">
+        <h2>Light Peach <br> Australia Zircon</h2>
+        <p>Light Peach Australian Zircon comes from the mineral-rich regions of Australia, where zircon has been mined for centuries. Known for its brilliant sparkle and vibrant fire, zircon is one of the oldest minerals on Earth, dating back over 4 billion years. The soft peach color is naturally occurring and highlights the stone’s warm, luminous glow. Australian zircon is carefully sourced to ensure quality and ethical mining practices, making it a beautiful and responsible choice for jewelry.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 -->
+  <section class="diamond-section">
+
+    <div class="diamond-container">
+      <img src="diamond8.jpg" class="diamond-img">
+      <div class="diamond-text">
+        <h2>Radiant <br> Montana Sapphire</h2>
+        <p>Montana sapphires come from the U.S. state of Montana, a region known for producing stones with remarkable clarity and natural color. Mined since the late 1800s, these sapphires are prized for their rich blues and subtle pastel shades. The radiant cut, with its trimmed corners and brilliant facets, maximizes sparkle and brings out the depth of the stone’s color. </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9 -->
+  <section class="diamond-section">
+
+    <div class="diamond-container">
+      <img src="diamond9.jpg" class="diamond-img">
+      <div class="diamond-text">
+        <h2>Trillion Cut <br> Oregon Sunstone</h2>
+        <p>Oregon Sunstones come from the high-desert regions of Oregon, where they have been mined for over a century. These stones are prized for their warm, sparkling colors that range from peach and gold to deep reddish hues. The trillion cut, with its triangular shape and brilliant facets, enhances the natural shimmer of the sunstone, creating a bold and vibrant look.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+      <a href="craft.html" class="btn">Customize Your Perfect Ring</a>
+
+    </div>
+
+  </div>
+</section>
+

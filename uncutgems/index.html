@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uncut Gems</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Michroma', sans-serif;
+      background-color: #306782;
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #8FA7B2;
+      padding: 15px 30px;
+      z-index: 10;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: gray;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-image: url('indexpic1.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    .hero-overlay-text {
+      position: relative;
+      z-index: 2;
+      color: white;
+      max-width: 80%;
+    }
+
+    .hero-overlay-text h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-overlay-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-overlay-text p {
+      font-size: 1.5rem;
+    }
+
+    /* Centered Welcome Section */
+    .welcome-section {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .welcome-section h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .welcome-section h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    /* Story Section */
+    .story-section {
+      width: 100%;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+.story-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 40px;
+  align-items: center; /* center the text vertically */
+}
+.story-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 40px;
+  align-items: center; /* THIS centers the text vertically beside the images */
+}
+
+.story-text {
+  text-align: center; /* THIS centers the lines of text */
+}
+
+
+    .story-images {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+ .story-images img {
+  width: 260px;           /* set a fixed width */
+  height: 260px;          /* same as width to make it square */
+  border-radius: 50%;     /* this makes it circular */
+  object-fit: cover;      /* crops the image nicely */
+}
+
+    .story-text {
+      flex: 2 1 400px;
+    }
+
+    .story-text p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .story-text hr {
+      border: 1px solid white;
+      margin: 20px 0;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #8FA7B2;
+      color: white;
+      text-decoration: none;
+      border-radius: 100px;
+      margin-top: 20px;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #8FA7B2;
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .story-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .story-images, .story-text {
+        flex: unset;
+        width: 100%;
+        text-align: center;
+      }
+
+      .story-images img {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+    .story-text {
+  max-width: 700px;   /* make the line length shorter */
+  margin: 0 auto;     /* center it */
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+}
+.nav-logo {
+  height: 32px;   /* adjust size */
+  width: auto;
+  vertical-align: middle;
+
+  </style>
+</head>
+<script>
+ 
+</script>
+
+</script>
+
+</script>
+
+<body>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="origin.html">Origin</a></li>
+
+    <!-- LOGO IN THE CENTER -->
+    <li><img src="logo.png" alt="Logo" class="nav-logo"></li>
+
+    <li><a href="craft.html">Craft</a></li>
+    <li><a href="create.html">Create</a></li>
+  </ul>
+</nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-overlay-text">
+  
+      <h2>Discover Your Perfect Gem</h2>
+      <p>Ethical, unique, and crafted just for you</p>
+    </div>
+  </div>
+
+  <!-- Centered Welcome Section -->
+  <section class="welcome-section">
+    <div>
+      <h2>Welcome to Uncut Gems</h2>
+<br>
+
+      <h3>Where a story is waiting to be cut...</h3>
+    </div>
+  </section>
+
+<!-- Info / Story Section: Images Left, Text Right -->
+<section class="story-section">
+  <div class="story-container">
+
+    <!-- Images stacked vertically -->
+    <div class="story-images">
+      <img src="indexpic2.jpg" alt="Gemstone 2">
+      <br>
+
+     <img src="indexpic3.jpg" alt="Gemstone 3">
+    </div>
+
+    <!-- Text on the right -->
+    <div class="story-text">
+      <p>Hi, I’m Izzy, the founder, designer, and diamond lover. I started this company because I’ve always believed diamonds should feel personal. I wanted people to have access to diamonds that are ethical, honest, and truly unique to them.</p>
+
+      <p>At Uncut Gems, you’re not just buying a ring; you’re part of it and the crafting process. From choosing your diamond to shaping your band, every detail is made with your story, and your style.</p>
+
+      <hr>
+
+      <p>My mission is simple:<br>To create jewelry that feels real, raw, and original.</p>
+
+      <p>Our rings are crafted with care, using high-quality materials. Whether you’re looking for a bold statement piece or a subtle everyday piece, every ring is made with your story in mind.</p>
+
+      <p>Follow our journey on Instagram and behind-the-scenes looks: @uncutgems</p>
+<a href="origin.html" class="btn" id="createBtn">Start creating your dream ring</a>
+
+<script>
+  // Load the sparkle sound
+  const sparkleSound = new Audio('sparkles.mp3');
+
+  // Get your actual button
+  const button = document.getElementById('createBtn');
+
+  button.addEventListener('click', function(e) {
+    e.preventDefault(); // stop immediate navigation
+
+    // Play the sparkle sound
+    sparkleSound.currentTime = 0;
+    sparkleSound.play().catch(err => console.log(err));
+
+    // Navigate after the sound plays (or after 500ms fallback)
+    sparkleSound.addEventListener('ended', () => {
+      window.location.href = button.href;
+    });
+    setTimeout(() => {
+      window.location.href = button.href;
+    }, 2500);
+  });
+</script>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
