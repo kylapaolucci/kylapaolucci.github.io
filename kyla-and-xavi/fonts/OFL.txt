@@ -1,0 +1,9 @@
+Hepta Slab (Light 300, Regular 400)
+Copyright 2018 The Hepta Slab Project Authors
+https://github.com/mjlagattuta/Hepta-Slab
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+Full license text: https://scripts.sil.org/OFL
+
+The .woff2 and .woff files here are subsets of the originals, limited to
+Latin characters. No other modifications were made.
